@@ -36,11 +36,8 @@
 
 ## 2. 安装lua5.1
  
-	sudo apt-get install liblua5.1-dev luajit libluajit-5.1 python-dev 	ruby-dev libperl-dev libncurses5-dev libgnome2-dev libgnomeui-dev 	libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-	dev libxpm-dev libxt-dev
+	sudo apt-get install liblua5.1-dev luajit libluajit-5.1 python-dev 	ruby-dev (libperl-dev libncurses5-dev libgnome2-dev libgnomeui-dev 	libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-	dev libxpm-dev libxt-dev)
  
-	sudo mkdir /usr/include/lua5.1/include
-	sudo mv /usr/include/lua5.1/*.h /usr/include/lua5.1/include/
-	sudo apt-get install liblua5.1-dev luajit libluajit-5.1
 	sudo mkdir /usr/include/lua5.1/include
 	sudo mv /usr/include/lua5.1/*.h /usr/include/lua5.1/include/
 	
