@@ -81,6 +81,25 @@
 ##### 2.3 pull代码，编译，build imaga， 推镜像 等（由drone来完成）
 
 	详细介绍drone
+	
+ 1.  构建一个项目的过程（www.shurenyun.com） .sryci.yaml 文件 dockerfile文件
+ 
+ 2.  .env.sample 配置文件
+ 
+ 3. drone api 接口  
+     * post /api/repo
+     * post /api/hook
+     * get /api/log
+     * delete 
+ 
+ 4. sryun driver 
+     * 解析 .sryci.yaml
+     * 初始化用户repo，检查是否需要build (git fetch --depth=1 origin)
+     
+ 
+ 5. poller   定时检查是否需要更新
+ 
+ 6. drone-exec drone-git drone-cache
 
 ##### 2.4 用户通过构建好的镜像部署应用。
 
@@ -103,3 +122,5 @@
 
 #### 3. 灰度发布 （haproxy, bamboo）
 
+	原理： 1. haproxy 权重
+	      2. haproxy 后面放多个应用  对外暴露同一个端口。 
