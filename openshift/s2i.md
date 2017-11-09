@@ -1,10 +1,10 @@
 S2I 基本概念
 
-[Source-to-Image(S2i)](https://github.com/openshift/source-to-image) 是一个从代码构架镜像的框架，工作流程是：运行一个builder 基础镜像，并将用户代码注入到容器里，经过编译，参数配置等过程，最终产生一个可以运行的镜像。使用s2i的最大优势就是对开发友好，在制作S2I 镜像前，你必须理解一下几个概念 builder 镜像 和 S2I脚本
+[Source-to-Image(S2i)](https://github.com/openshift/source-to-image) 是一个从代码构建镜像的框架，工作流程是：运行一个builder 基础镜像，并将用户代码注入到容器里，经过编译，参数配置等过程，最终产生一个可以运行的镜像。使用s2i的最大优势就是对开发友好，在制作S2I 镜像前，你必须理解一下几个概念 builder 镜像 和 S2I脚本
 
 - Builder 镜像
 
-  Builder 镜像是一个用户构建运行时镜像的基础镜像，可以是任何一个镜像；OpenShift CICD 流程中，启动自定义的builder镜像，在容器完成中从github 或者SVN 中拉取代码，编译，环境配置等过程，将这个运行的容器commit 成一个可运行的镜像。
+  Builder 镜像是一个用户构建运行时镜像的基础镜像，可以是任何一个镜像；OpenShift CICD 流程中，启动自定义的builder镜像，在容器中完成从github 或者SVN 中拉取代码，编译，环境配置等过程，将这个运行的容器commit 成一个可运行的镜像。
 
 - S2I 脚本
 
