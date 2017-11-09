@@ -233,7 +233,7 @@ exec $TOMCAT_HOME/bin/catalina.sh run
 
 从UI 发布应用，选择Browse Catalog， 搜索tomcat，就会发现我们制作的ImageStream, 如下：
 
-![tomcat-maven-imagestream](../picture/tomcat-maven-imagestream.png)
+![tomcat-maven-imagestream](./picture/tomcat-maven-imagestream.png)
 
 s2i 还是有更高级的用法，比如增量编译等，这里就不详细介绍了，感兴趣的请[点击这里](https://github.com/openshift-s2i/s2i-wildfly/tree/master/11.0 )参考：
 
