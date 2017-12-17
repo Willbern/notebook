@@ -101,8 +101,10 @@ ENV PATH $JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 # openshift 为了容器安全，使用非root 用户启动容器，默认是一个root组的随机id 用户
 # openshift/base-centos7 基础镜像中有用户id为1001的root组用户，所有我们将需要操作的数据文件都赋给
 # 1001:0
-RUN chown -R 1001:0 /opt/app-root
-RUN chown -R 1001:0 /usr/libexec/s2i
+RUN chown -R 1001:0 /opt/app-root && \
+    chown -R 1001:0 /usr/libexec/s2i && \
+    chmod -R 775 /opt/app-root && \
+    chmod -R 775 /usr/libexec/s2i
 
 # This default user is created in the openshift/base-centos7 image
 USER 1001
